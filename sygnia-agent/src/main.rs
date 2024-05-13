@@ -66,4 +66,3 @@ fn send_heartbeat_request(url: &str) -> Result<(), reqwest::Error> {
         }
     }
 }
-
