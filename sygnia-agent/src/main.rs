@@ -11,7 +11,8 @@ The agent's main task is to periodically collect as much data as it can from the
 the server as part of a `heartbeat` request. This request should be sent every 15 minutes to ensure up-to-date
 information.
 
-Your task is to implement as many collectors as you can (in the given time). Ideas for collectors:
+Your task is to implement as many collectors as you can (in the given time), from the operating system you're working on.
+Ideas for collectors:
 * Disk usage statistics
 * Memory usage statistics
 * Network interfaces list
