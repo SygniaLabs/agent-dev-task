@@ -7,6 +7,8 @@ We hope the process is going well for you so far.
 
 Please follow the instructions below, and don't hesitate to ask us for anything you need.
 
+## Setup
+To run this exercise, you'll need Python (3.8+) and Rust installed on your workstation.
 
 ## Instructions
 
