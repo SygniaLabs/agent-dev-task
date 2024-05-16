@@ -10,7 +10,6 @@ Please follow the instructions below, and don't hesitate to ask us for anything 
 
 ## Instructions
 
-If you prefer to develop locally:
 1. Clone the repo
 2. Install the backend CNC server package (`cd sygnia-cnc-server; pip install -U -r requirements.txt`)
 3. Run the backend CNC server (`cd sygnia-cnc-server; python server.py`)
