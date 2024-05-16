@@ -28,7 +28,7 @@ appears as expected in these logs.
 
 // Specify the URL to which you want to send the heartbeat request
 const SERVER_URL: &str = "http://127.0.0.1:5000/heartbeat";
-const HEARTBEAT_INTERVAL: u32 = 15;
+const HEARTBEAT_INTERVAL: u64 = 15;
 
 fn main() {
     // Infinite loop
