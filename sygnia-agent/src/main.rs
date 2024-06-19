@@ -6,24 +6,38 @@ use serde_json::json;
 
 /***********************************************************************************************************************
 In this exercise you will implement the business logic of a simple Rust agent.
+We will focus on core capabilities of the agent, on the operating system you're working on.
 
-The agent's main task is to periodically collect as much data as it can from the host it's running on and send it to
-the server as part of a `heartbeat` request. This request should be sent every 15 minutes to ensure up-to-date
-information.
+Step 1:
+    One of the agent's main tasks is to periodically collect as much data as it can from the
+    host it's running on and send it to the server as part of a `heartbeat` request.
+    This request should be sent every 15 seconds to ensure up-to-date information.
 
-Your task is to implement as many collectors as you can (in the given time), from the operating system you're working on.
-Ideas for collectors:
-* Disk usage statistics
-* Memory usage statistics
-* Network interfaces list
-* Disk volumes list
-(Or anything else you may come up with)
+    In this step, choose 2-3 general information collectors and implement them.
+    Ideas for collectors:
+    * Disk usage statistics
+    * Memory usage statistics
+    * Network interfaces list
+    * Disk volumes list
+    (Or anything else you may come up with)
+
+Step 2:
+    Another core capability the agent must have is running commands from its server.
+    In this step, we will implement a "protocol" between the server and the agent.
+    See sygnia-cnc-server/server.py:11 and choose a proper way the server can ask the agent
+    for a "dirlist" command.
+    Then, implement the actual command execution on the agent's side - get the command from the
+    server, execute it and save the result to a local file. Assume that the "dirlist" command
+    starts its walking from the host's root directory (or C:\ if it's a Windows machine), and
+    choose the format you want to represent the result in.
 
 A few tips before you go:
-1. The server is configured to log the body of the requests it receives. Make sure that the data sent by your agent
-appears as expected in these logs.
-2. Feel free to install and import any external packages that may assist you in implementing the collectors.
-3. Aim to implement as many collectors as possible within the given time constraints.
+1. The server is configured to log the body of the requests it receives.
+   Make sure that the data sent by your agent appears as expected in these logs.
+   Feel free to add any helpful debug-prints you need.
+2. Feel free to install and import any external packages that may assist you in implementing the
+   collectors or the dirlist resolver.
+
 ***********************************************************************************************************************/
 
 // Specify the URL to which you want to send the heartbeat request
